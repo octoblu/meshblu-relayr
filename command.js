@@ -38,7 +38,6 @@ conx.on('message', function(){
 });
 
 conx.on('config', function(){
-  console.log('configuring');
   try {
     plugin.onConfig.apply(plugin, arguments);
   } catch (error){

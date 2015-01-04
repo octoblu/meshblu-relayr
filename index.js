@@ -50,8 +50,7 @@ Plugin.prototype.onMessage = function(msg){
 };
 
 Plugin.prototype.onConfig = function(device){
-  console.log('configured');
-  debug(device)
+  debug('configured:',util.inspect(device));
 
   var self = this;
   self.setOptions(device.options);
