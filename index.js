@@ -87,7 +87,7 @@ Plugin.prototype.onConfig = function(device){
 Plugin.prototype.setOptions = function(options){
   if (options.dev_id &&
       options.app_id &&
-      options.token) {
+      options.app_token) {
     this.options = options;
   } else {
     this.options = defaultOptions;
