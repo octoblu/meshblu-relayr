@@ -1,0 +1,24 @@
+{
+  "name": "meshblu-relayr",
+  "version": "1.0.0",
+  "description": "",
+  "start": "node command.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/octoblu/meshblu-relayr.git"
+  },
+  "author": "Erik Wilson <Erik.E.Wilson@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/octoblu/meshblu-relayr/issues"
+  },
+  "homepage": "https://github.com/octoblu/meshblu-relayr",
+  "dependencies": {
+    "debug": "^2.1.1",
+    "relayr": "^0.1.1",
+    "skynet": "^1.8.3"
+  }
+}
