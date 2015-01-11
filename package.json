@@ -1,6 +1,6 @@
 {
   "name": "meshblu-relayr",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "start": "node command.js",
   "scripts": {
@@ -19,6 +19,6 @@
   "dependencies": {
     "debug": "^2.1.1",
     "relayr": "^0.1.1",
-    "skynet": "^1.8.3"
+    "meshblu": "^1.9.0"
   }
 }
