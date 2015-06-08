@@ -1,6 +1,6 @@
 {
   "name": "meshblu-relayr",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "start": "node command.js",
   "scripts": {
@@ -18,7 +18,7 @@
   "homepage": "https://github.com/octoblu/meshblu-relayr",
   "dependencies": {
     "debug": "^2.1.1",
-    "relayr": "^0.1.1",
-    "meshblu": "^1.9.0"
+    "meshblu": "^1.9.0",
+    "relayr": "^0.3.8"
   }
 }

@@ -3,7 +3,7 @@
 var util = require('util');
 var EventEmitter = require('events').EventEmitter;
 var debug = require('debug')('meshblu-relayr');
-var relayr = require('relayr');
+var Relayr = require('relayr');
 var meshblu = {};
 try {
   meshblu = require('./meshblu.json');
@@ -70,14 +70,13 @@ Plugin.prototype.onConfig = function(device){
   if (relayrKeys.dev_id &&
       relayrKeys.app_id &&
       relayrKeys.token) {
-    relayr.connect(relayrKeys);
-    relayr.listen(function(err,data){
-      if (err) {
-        debug('relayr error:', err)
-      } else {
-        console.log(data);
-        self.emit("message", {devices: ['*'], payload: {data: data}});
-      }
+
+    var relayr = new Relayr(relayrKeys.app_id);
+    relayr.connect(relayrKeys.token, relayrKeys.dev_id);
+
+    relayr.on('data', function (topic, msg) {
+        debug(topic + ":" + JSON.stringify(msg,null,2));
+        self.emit("message", {devices: ['*'], payload: {data: msg}});
     });
   } else {
     console.log("missing configuration");
